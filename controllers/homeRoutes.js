@@ -1,8 +1,10 @@
 const sequelize = require('../config/connection');
 const { Post, User, Comment } = require('../models');
 const router = require('express').Router();
-// console.log('**************' + req.session.username);
+
+// set up home route for all posts
 router.get('/', (req, res) => {
+// get all posts and JOIN with user data
   Post.findAll({
     attributes: ['id', 'title', 'content', 'created_at'],
     include: [
@@ -21,7 +23,9 @@ router.get('/', (req, res) => {
     ],
   })
     .then((dbPostData) => {
+// serialize data so the template can read it
       const posts = dbPostData.map((post) => post.get({ plain: true }));
+// pass serialized data into template
       res.render('homepage', {
         posts,
         logged_in: req.session.logged_in,
@@ -35,6 +39,7 @@ router.get('/', (req, res) => {
 });
 
 router.get('/login', (req, res) => {
+// If the user is already logged in, redirect the request to another route
   if (req.session.loggedIn) {
     res.redirect('/');
     return;
@@ -46,7 +51,9 @@ router.get('/signup', (req, res) => {
   res.render('signup');
 });
 
+// set up home route for single post
 router.get('/post/:id', (req, res) => {
+// get single post and JOIN with user data
   Post.findOne({
     where: {
       id: req.params.id,
