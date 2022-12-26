@@ -33,11 +33,11 @@
     line-height: 1.25;
   }
   
-  h2 a:visited {
+  h4 a:visited {
     color: var(--tertiary);
   }
   
-  h2 a {
+  h4 a {
     color: var(--primary);
   }
   

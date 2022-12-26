@@ -59,7 +59,7 @@ WHEN I am idle on the site for more than a set time <br>
 THEN I am able to view comments but I am prompted to log in again before I can add, update, or delete comments 
  
 ## Screenshot
-![ScreenShot](./images/)
+![ScreenShot](./public/images/Screenshot%202022-12-26%20135858.png)
 
 ## Installation
 1. To setup the application in local, run "npm i" to install the below packages. 
