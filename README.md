@@ -93,7 +93,7 @@ THEN I am able to view comments but I am prompted to log in again before I can a
 ## Live URL 
 https://young-savannah-76133.herokuapp.com/
 * Please note you will currently receive an application error when selecting this link to Heroku deployment.
-* To use this tech blog app please use git clone https://github.com/CheBar1/tech-blog.git to your local repo. 
+* To use this tech blog app please use git clone https://github.com/CheBar1/tech-blog2.git to your local repo. 
  
 ## Contact Me
 * GitHub: [CheBar1](https://github.com/CheBar1)
