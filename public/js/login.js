@@ -1,3 +1,4 @@
+// handle login
 const loginFormHandler = async (event) => {
     // stop the browser from submitting the form so we can do so with JavaScript
         event.preventDefault();
@@ -7,7 +8,7 @@ const loginFormHandler = async (event) => {
     
         if (username && password) {
     // send the e-mail and password to the server
-            const response = await fetch('/api/user/login', {
+            const response = await fetch('/api/user', {
                 method: 'POST',
                 body: JSON.stringify({username, password}),
                 headers: { 'Content-Type': 'application/json' },

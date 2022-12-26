@@ -13,7 +13,7 @@ router.get('/', async (req, res) => {
 });
 
 
-// return all posts from this userid
+// return all posts from this user id
 router.get('/:id', async (req, res) => {
   try {
     const userData = await User.findOne({

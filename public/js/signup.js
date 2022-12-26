@@ -22,7 +22,8 @@ const signupFormHandler = async (event) => {
         console.log('sign up error');
     }
   }
-}
+};
+
 
 document
     .querySelector('.signup-form')
